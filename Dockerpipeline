@@ -28,7 +28,9 @@ pipeline {
     //Running Docker container
     stage('Run containers'){
       steps{
-        //your command
+        docker run -d -p 8084:8080 --name teedy_201 teedy2024
+        docker run -d -p 8082:8080 --name teedy_202 teedy2024
+        docker run -d -p 8083:8080 --name teedy_203 teedy2024
       }
     }
   }
